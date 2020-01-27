@@ -12,6 +12,8 @@ namespace GreekTheater.API.Core.Entities
 
         public string RoleName { get; set; }
 
+        public string DisplayTitle => $"{RoleName}, {Performance.DisplayTitle}";
+
         public int ActorId { get; set; }
         public Actor Actor { get; set; }
 

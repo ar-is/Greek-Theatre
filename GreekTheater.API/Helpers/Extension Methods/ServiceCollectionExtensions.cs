@@ -1,7 +1,14 @@
-﻿using GreekTheater.API.Core.Repositories;
+﻿using GreekTheater.API.Core.Entities;
+using GreekTheater.API.Core.Repositories;
 using GreekTheater.API.Core.Services;
+using GreekTheater.API.Core.Services.Data_Shaping;
+using GreekTheater.API.Core.Services.Pagination;
+using GreekTheater.API.Core.Services.Sorting;
 using GreekTheater.API.Persistence.Repositories;
 using GreekTheater.API.Persistence.Services;
+using GreekTheater.API.Persistence.Services.Data_Shaping;
+using GreekTheater.API.Persistence.Services.Pagination;
+using GreekTheater.API.Persistence.Services.Sorting;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.Extensions.Configuration;
@@ -25,16 +32,16 @@ namespace GreekTheater.API.Helpers.Extension_Methods
                 var factory = serviceProvider.GetRequiredService<IUrlHelperFactory>();
                 return factory.GetUrlHelper(actionContext);
             });
-            //services.AddScoped<IPaginationService<Movie>, MoviesPaginationService>();
-            //services.AddScoped<IRootPaginationService, RootPaginationService>();
-            //services.AddScoped<IDependentPaginationService<Movie>, MoviesPaginationService>();
-            //services.AddScoped<IDataShapingService<Movie>, MovieShapingService>();
+            services.AddScoped<IPaginationService<Performance>, PerformancePaginationService>();
+            services.AddScoped<IRootPaginationService, RootPaginationService>();
+            services.AddScoped<IDependentPaginationService<Performance>, PerformancePaginationService>();
+            services.AddScoped<IDataShapingService<Performance>, PerformanceShapingService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IDirectorRepository, DirectorRepository>();
-            //services.AddScoped<IMovieRepository, MovieRepository>();
-            //services.AddScoped<IMovieTagRepository, MovieTagRepository>();
-            //services.AddTransient<IPropertyMappingService, PropertyMappingService>();
-            //services.AddTransient<IPropertyCheckerService, PropertyCheckerService>();
+            services.AddScoped<IActorRepository, ActorRepository>();
+            services.AddScoped<IPerformanceRepository, PerformanceRepository>();
+            services.AddTransient<IPropertyMappingService, PropertyMappingService>();
+            services.AddTransient<IPropertyCheckerService, PropertyCheckerService>();
 
             return services;
         }

@@ -1,4 +1,5 @@
-﻿using GreekTheater.API.Helpers.CustomValidations;
+﻿using GreekTheater.API.Core.Dtos.Person;
+using GreekTheater.API.Helpers.CustomValidations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,17 +8,7 @@ using System.Threading.Tasks;
 
 namespace GreekTheater.API.Core.Dtos.Director
 {
-    public class DirectorForManipulationDto
+    public class DirectorForManipulationDto : PersonForManipulationDto
     {
-        [Required]
-        [MaxLength(50)]
-        public string FirstName { get; set; }
-
-        [Required]
-        [MaxLength(50)]
-        public string LastName { get; set; }
-
-        [DateOfBirthRange]
-        public virtual DateTimeOffset? DateOfBirth { get; set; }
     }
 }

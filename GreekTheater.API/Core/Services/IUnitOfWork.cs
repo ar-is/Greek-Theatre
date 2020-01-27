@@ -9,6 +9,8 @@ namespace GreekTheater.API.Core.Services
     public interface IUnitOfWork
     {
         IDirectorRepository Directors { get; }
+        IActorRepository Actors { get; }
+        IPerformanceRepository Performances { get; }
 
         void Complete();
     }

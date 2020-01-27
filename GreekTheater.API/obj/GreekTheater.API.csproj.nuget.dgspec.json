@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arist\\source\\repos\\GreekTheater\\GreekTheater.API\\GreekTheater.API.csproj": {}
+    "C:\\Users\\e62824\\source\\repos\\Greek-Theatre\\GreekTheater.API\\GreekTheater.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arist\\source\\repos\\GreekTheater\\GreekTheater.API\\GreekTheater.API.csproj": {
+    "C:\\Users\\e62824\\source\\repos\\Greek-Theatre\\GreekTheater.API\\GreekTheater.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arist\\source\\repos\\GreekTheater\\GreekTheater.API\\GreekTheater.API.csproj",
+        "projectUniqueName": "C:\\Users\\e62824\\source\\repos\\Greek-Theatre\\GreekTheater.API\\GreekTheater.API.csproj",
         "projectName": "GreekTheater.API",
-        "projectPath": "C:\\Users\\arist\\source\\repos\\GreekTheater\\GreekTheater.API\\GreekTheater.API.csproj",
-        "packagesPath": "C:\\Users\\arist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arist\\source\\repos\\GreekTheater\\GreekTheater.API\\obj\\",
+        "projectPath": "C:\\Users\\e62824\\source\\repos\\Greek-Theatre\\GreekTheater.API\\GreekTheater.API.csproj",
+        "packagesPath": "C:\\Users\\e62824\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\e62824\\source\\repos\\Greek-Theatre\\GreekTheater.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\arist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\e62824\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,6 +45,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Marvin.Cache.Headers": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[3.1.1, )"
@@ -62,6 +66,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.0.20, )"
             }
           },
           "imports": [

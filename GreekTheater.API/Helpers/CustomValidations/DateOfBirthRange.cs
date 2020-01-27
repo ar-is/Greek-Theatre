@@ -1,4 +1,5 @@
 ﻿using GreekTheater.API.Core.Dtos.Director;
+using GreekTheater.API.Core.Dtos.Person;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -14,18 +15,18 @@ namespace GreekTheater.API.Helpers.CustomValidations
 
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            var director = (DirectorForManipulationDto)validationContext.ObjectInstance;
+            var person = (PersonForManipulationDto)validationContext.ObjectInstance;
 
-            if (director.DateOfBirth.HasValue && !DateOfBirthHasValidRange())
+            if (person.DateOfBirth.HasValue && !DateOfBirthHasValidRange())
                 return new ValidationResult(
                     $"Date of Birth must be between {MinimumDateOfBirth.Year} and {MaximumDateOfBirth.Year}",
-                    new[] { nameof(DirectorForManipulationDto) });
+                    new[] { nameof(PersonForManipulationDto) });
 
             return ValidationResult.Success;
 
             bool DateOfBirthHasValidRange()
-                => director.DateOfBirth >= MinimumDateOfBirth &&
-                   director.DateOfBirth <= MaximumDateOfBirth;
+                => person.DateOfBirth >= MinimumDateOfBirth &&
+                   person.DateOfBirth <= MaximumDateOfBirth;
         }
     }
 }

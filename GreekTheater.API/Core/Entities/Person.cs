@@ -13,6 +13,8 @@ namespace GreekTheater.API.Core.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        public string FullName => $"{FirstName} {LastName}";
+
         public DateTimeOffset? DateOfBirth { get; set; }
         public DateTimeOffset? DateOfDeath { get; set; }
     }
