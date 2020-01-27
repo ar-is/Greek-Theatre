@@ -18,7 +18,9 @@ namespace GreekTheater.API.Helpers.Extension_Methods
             if (string.IsNullOrWhiteSpace(fields))
                 return GetExpandoObject(source);
 
-            return GetFilteredExpandoObject(source, fields);
+            var expando = GetFilteredExpandoObject(source, fields);
+
+            return expando;
         }
 
         private static ExpandoObject GetExpandoObject<TSource>(TSource source)

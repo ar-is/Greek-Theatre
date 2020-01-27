@@ -18,7 +18,9 @@ namespace GreekTheater.API.Helpers.Extension_Methods
 
             var propertyInfos = GetPropertyInfos<TSource>(fields);
 
-            return GetExpandoObjects(source, propertyInfos);
+            var expandos = GetExpandoObjects(source, propertyInfos);
+
+            return expandos;
         }
 
         private static IEnumerable<ExpandoObject> GetExpandoObjects<TSource>(
@@ -51,7 +53,8 @@ namespace GreekTheater.API.Helpers.Extension_Methods
             if (string.IsNullOrWhiteSpace(fields))
             {
                 var propertyInfos = typeof(TSource)
-                        .GetProperties(BindingFlags.Public | BindingFlags.Instance);
+                        .GetProperties(BindingFlags.IgnoreCase | 
+                        BindingFlags.Public | BindingFlags.Instance);
 
                 propertyInfoList.AddRange(propertyInfos);
             }

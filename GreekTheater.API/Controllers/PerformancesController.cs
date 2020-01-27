@@ -64,6 +64,9 @@ namespace GreekTheater.API.Controllers
                 !_propertyCheckerService.TypeHasProperties<PerformanceDto>(parameters.Fields))
                 return BadRequest();
 
+            if (!string.IsNullOrEmpty(parameters.Fields) && !parameters.Fields.Contains("id"))
+                return BadRequest();
+
             var performances = _unitOfWork.Performances.GetPerformances(parameters);
 
             Response.Headers.Add("X-Pagination",

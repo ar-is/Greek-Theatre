@@ -20,7 +20,7 @@ namespace GreekTheater.API.Helpers.Extension_Methods
 
             try
             {
-                //context.Database.EnsureDeleted();
+                context.Database.EnsureDeleted();
                 context.Database.Migrate();
             }
             catch (Exception ex)

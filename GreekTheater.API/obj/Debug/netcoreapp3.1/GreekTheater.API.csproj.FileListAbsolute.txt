@@ -113,3 +113,6 @@ C:\Users\e62824\source\repos\Greek-Theatre\GreekTheater.API\bin\Debug\netcoreapp
 C:\Users\e62824\source\repos\Greek-Theatre\GreekTheater.API\obj\Debug\netcoreapp3.1\GreekTheater.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\e62824\source\repos\Greek-Theatre\GreekTheater.API\obj\Debug\netcoreapp3.1\GreekTheater.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\e62824\source\repos\Greek-Theatre\GreekTheater.API\bin\Debug\netcoreapp3.1\System.Linq.Dynamic.Core.dll
+C:\Users\arist\source\repos\GreekTheater\GreekTheater.API\bin\Debug\netcoreapp3.1\Marvin.Cache.Headers.dll
+C:\Users\arist\source\repos\GreekTheater\GreekTheater.API\bin\Debug\netcoreapp3.1\System.Linq.Dynamic.Core.dll
+C:\Users\arist\source\repos\GreekTheater\GreekTheater.API\obj\Debug\netcoreapp3.1\GreekTheater.API.MvcApplicationPartsAssemblyInfo.cs

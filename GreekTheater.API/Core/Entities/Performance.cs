@@ -9,7 +9,7 @@ namespace GreekTheater.API.Core.Entities
     public class Performance
     {
         public int Id { get; set; }
-        public Guid Guid { get; set; }
+        public Guid Guid { get; set; } = Guid.NewGuid();
 
         public string Title { get; set; }
 

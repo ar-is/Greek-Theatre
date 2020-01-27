@@ -154,14 +154,14 @@ namespace GreekTheater.API.Persistence.Repositories
             return GetPerformances()
                       .Where(p => p.Director.FirstName.Contains(filter.Director) ||
                                   p.Director.LastName.Contains(filter.Director))
-                      .Where(p => p.PremiereDate.GetValueOrDefault().Year == filter.PremiereYear);
+                      .Where(p => p.PremiereDate.HasValue ? p.PremiereDate.Value.Year == filter.PremiereYear : true);
 
         }
 
         private IQueryable<Performance> GetPerformancesFilteredByYear(PerformancesFilter filter)
         {
             return GetPerformances()
-                      .Where(p => p.PremiereDate.GetValueOrDefault().Year == filter.PremiereYear);
+                      .Where(p => p.PremiereDate.HasValue ? p.PremiereDate.Value.Year == filter.PremiereYear : true);
         }
 
         private IQueryable<Performance> GetPerformancesFilteredByTitle(PerformancesFilter filter)
@@ -176,14 +176,14 @@ namespace GreekTheater.API.Persistence.Repositories
                       .Where(p => p.Director.FirstName.Contains(filter.Director) ||
                                   p.Director.LastName.Contains(filter.Director))
                       .Where(p => p.Title.Contains(filter.Title) &&
-                                  p.PremiereDate.GetValueOrDefault().Year == filter.PremiereYear);
+                                  p.PremiereDate.HasValue ? p.PremiereDate.Value.Year == filter.PremiereYear : true);
         }
 
         private IQueryable<Performance> GetPerformancesFilteredByTitleAndYear(PerformancesFilter filter)
         {
             return GetPerformances()
                       .Where(p => p.Title.Contains(filter.Title))
-                      .Where(p => p.PremiereDate.GetValueOrDefault().Year == filter.PremiereYear);
+                      .Where(p => p.PremiereDate.HasValue ? p.PremiereDate.Value.Year == filter.PremiereYear : true);
         }
 
         private IQueryable<Performance> GetPerformancesFilteredByTitleAndDirector(PerformancesFilter filter)
@@ -207,7 +207,7 @@ namespace GreekTheater.API.Persistence.Repositories
             var director = _context.Directors.SingleOrDefault(d => d.Guid == directorId);
 
             return _context.Performances.Any(p => p.Title == performance.Title &&
-                                            p.PremiereDate.GetValueOrDefault().Year == performance.PremiereDate.GetValueOrDefault().Year &&
+                                            (p.PremiereDate.HasValue ? p.PremiereDate.Value.Year == performance.PremiereDate.Value.Year : true) &&
                                             p.DirectorId == director.Id);
         }
 

@@ -13,5 +13,7 @@ namespace GreekTheater.API.Core.Dtos.Performance
         [Required]
         [MaxLength(100)]
         public string Title { get; set; }
+
+        public DateTimeOffset? PremiereDate { get; set; }
     }
 }

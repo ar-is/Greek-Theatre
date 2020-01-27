@@ -8,7 +8,7 @@ namespace GreekTheater.API.Core.Entities
     public abstract class Person
     {
         public int Id { get; set; }
-        public Guid Guid { get; set; }
+        public Guid Guid { get; set; } = Guid.NewGuid();
 
         public string FirstName { get; set; }
         public string LastName { get; set; }

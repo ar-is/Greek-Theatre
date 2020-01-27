@@ -8,7 +8,7 @@ namespace GreekTheater.API.Core.Entities
     public class Acting
     {
         public int Id { get; set; }
-        public Guid Guid { get; set; }
+        public Guid Guid { get; set; } = Guid.NewGuid();
 
         public string RoleName { get; set; }
 

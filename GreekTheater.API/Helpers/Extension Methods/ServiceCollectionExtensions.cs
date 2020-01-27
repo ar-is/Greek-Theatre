@@ -1,9 +1,12 @@
-﻿using GreekTheater.API.Core.Entities;
+﻿using AutoMapper;
+using GreekTheater.API.Core.Entities;
 using GreekTheater.API.Core.Repositories;
 using GreekTheater.API.Core.Services;
 using GreekTheater.API.Core.Services.Data_Shaping;
 using GreekTheater.API.Core.Services.Pagination;
 using GreekTheater.API.Core.Services.Sorting;
+using GreekTheater.API.Helpers.MappingProfiles;
+using GreekTheater.API.Persistence.DbContexts;
 using GreekTheater.API.Persistence.Repositories;
 using GreekTheater.API.Persistence.Services;
 using GreekTheater.API.Persistence.Services.Data_Shaping;
@@ -42,6 +45,10 @@ namespace GreekTheater.API.Helpers.Extension_Methods
             services.AddScoped<IPerformanceRepository, PerformanceRepository>();
             services.AddTransient<IPropertyMappingService, PropertyMappingService>();
             services.AddTransient<IPropertyCheckerService, PropertyCheckerService>();
+            //services.AddScoped(provider => new MapperConfiguration(cfg =>
+            //{
+            //    cfg.AddProfile(new ActingsProfile(provider.GetService<IUnitOfWork>()));
+            //}).CreateMapper());
 
             return services;
         }
