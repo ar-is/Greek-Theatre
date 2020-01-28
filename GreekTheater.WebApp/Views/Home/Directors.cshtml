@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Directors";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.min.css" />
+</head>
+
+<h1>Directors</h1>
+
+<table id="directors" class="table table-responsive">
+    <thead>
+        <tr>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>NUMBER OF PERFORMANCES</th>
+            <th>PERFORMANCES</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            DirectorsController.init();
+        });
+    </script>
+}
+

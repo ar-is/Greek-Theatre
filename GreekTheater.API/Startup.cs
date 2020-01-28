@@ -6,6 +6,7 @@ using AutoMapper;
 using GreekTheater.API.Helpers.Extension_Methods;
 using GreekTheater.API.Helpers.VendorMediaTypes;
 using GreekTheater.API.Persistence.DbContexts;
+using Marvin.Cache.Headers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,6 +34,18 @@ namespace GreekTheater.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpCacheHeaders((expirationModeloptions) =>
+            {
+                expirationModeloptions.MaxAge = 60;
+                expirationModeloptions.CacheLocation = CacheLocation.Private;
+            },
+            (validationModelOptions) =>
+            {
+                validationModelOptions.MustRevalidate = true;
+            });
+
+            services.AddResponseCaching();
+
             services
                 .AddControllers(setupAction =>
                 {
@@ -95,16 +108,16 @@ namespace GreekTheater.API
             //           .AddConsole();
             //});
 
-            //services.AddCors(options =>
-            //{
-            //    options.AddPolicy("LocalHostPolicy",
-            //        builder =>
-            //        {
-            //            builder.WithOrigins("https://localhost:44339")
-            //                   .AllowAnyHeader()
-            //                   .AllowAnyMethod();
-            //        });
-            //});
+            services.AddCors(options =>
+            {
+                options.AddPolicy("LocalHostPolicy",
+                    builder =>
+                    {
+                        builder.WithOrigins("https://localhost:44364")
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -126,9 +139,13 @@ namespace GreekTheater.API
                 });
             }
 
+            app.UseResponseCaching();
+
+            app.UseHttpCacheHeaders();
+
             app.UseRouting();
 
-            //app.UseCors("LocalHostPolicy");
+            app.UseCors("LocalHostPolicy");
 
             app.UseAuthorization();
 

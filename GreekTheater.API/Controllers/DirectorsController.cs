@@ -3,6 +3,7 @@ using GreekTheater.API.Core.Dtos.Director;
 using GreekTheater.API.Core.Entities;
 using GreekTheater.API.Core.Services;
 using GreekTheater.API.Helpers.ActionConstraints;
+using Marvin.Cache.Headers;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -18,6 +19,8 @@ namespace GreekTheater.API.Controllers
 {
     [ApiController]
     [Route("api/directors")]
+    [HttpCacheExpiration(CacheLocation = CacheLocation.Public)]
+    [HttpCacheValidation(MustRevalidate = true)]
     public class DirectorsController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -37,7 +40,9 @@ namespace GreekTheater.API.Controllers
         }
 
         [HttpGet("{directorId}", Name = "GetDirector")]
-        [HttpHead]
+        [HttpHead("{directorId}")]
+        [HttpCacheExpiration(CacheLocation = CacheLocation.Public, MaxAge = 1000)]
+        [HttpCacheValidation(MustRevalidate = false)]
         public ActionResult<DirectorDto> GetDirector(Guid directorId)
         {
             var director = _unitOfWork.Directors.GetDirector(directorId);

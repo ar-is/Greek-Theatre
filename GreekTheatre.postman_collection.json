@@ -1,0 +1,851 @@
+{
+	"info": {
+		"_postman_id": "4f4ff998-510c-4521-94f7-b1cb41f54a49",
+		"name": "GreekTheatre",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Directors",
+			"item": [
+				{
+					"name": "GET Directors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:51045/api/directors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Director",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:51045/api/directors/7b75a444-994d-4936-96bf-9c3c0804e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors",
+								"7b75a444-994d-4936-96bf-9c3c0804e42d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Director (unexisting)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:51045/api/directors/7b75a678-994d-4936-96bf-9c3c0094e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors",
+								"7b75a678-994d-4936-96bf-9c3c0094e42d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Director (Accept: application/json)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:51045/api/directors/7b75a444-994d-4936-96bf-9c3c0804e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors",
+								"7b75a444-994d-4936-96bf-9c3c0804e42d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Director (Accept: application/xml)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:51045/api/directors/7b75a444-994d-4936-96bf-9c3c0804e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors",
+								"7b75a444-994d-4936-96bf-9c3c0804e42d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HEAD Directors",
+					"request": {
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:51045/api/directors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OPTIONS Directors",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:51045/api/directors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Director",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Dimitris\",\r\n    \"lastName\" : \"Lignadis\",\r\n    \"dateOfBirth\" : \"1958-03-04T00:00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Director (application/vnd.marvin.directorforcreation+json)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/vnd.marvin.directorforcreation+json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Dimitris\",\r\n    \"lastName\" : \"Lignadis\",\r\n    \"dateOfBirth\" : \"1958-03-04T00:00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Director With Date of Death (application/vnd.marvin.directorforcreationwithdateofdeath+json)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/vnd.marvin.directorforcreationwithdateofdeath+json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Nikos\",\r\n    \"lastName\" : \"Kourkoulos\",\r\n    \"dateOfBirth\" : \"1958-03-04T00:00:00\",\r\n    \"dateOfDeath\" : \"2010-05-09T00:00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Director (no body)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Director (invalid body)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Dimitris\",\r\n    \"lastName\" : \"Lignadis\",\r\n    \"dateOfBirth\" : \"invalid\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Director (XML Output)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Dimitris\",\r\n    \"lastName\" : \"Lignadis\",\r\n    \"dateOfBirth\" : \"1958-03-04T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Director",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Updated First Name\",\r\n    \"lastName\" : \"Updated Last Name\",\r\n    \"dateOfBirth\" : \"1978-03-04T00:00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors/7b75a444-994d-4936-96bf-9c3c0804e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors",
+								"7b75a444-994d-4936-96bf-9c3c0804e42d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Director (no FirstName)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastName\" : \"Updated Last Name\",\r\n    \"dateOfBirth\" : \"1978-03-04T00:00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors/7b75a444-994d-4936-96bf-9c3c0804e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors",
+								"7b75a444-994d-4936-96bf-9c3c0804e42d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Director (invalid)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastName\" : \"Updated Last Name\",\r\n    \"dateOfBirth\" : \"Invalid\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors/7b75a444-994d-4936-96bf-9c3c0804e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors",
+								"7b75a444-994d-4936-96bf-9c3c0804e42d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT (UPSERT) Director (unexisting)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Updated First Name\",\r\n    \"lastName\" : \"Updated Last Name\",\r\n    \"dateOfBirth\" : \"1978-03-04T00:00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors/7b75a678-994d-4596-96bf-9c3c0804e32d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors",
+								"7b75a678-994d-4596-96bf-9c3c0804e32d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Director",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json-patch+json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n      \"op\": \"replace\",\n      \"path\": \"/firstName\",\n      \"value\": \"Updated FirstName\"\n    }\n]"
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors/7b75a444-994d-4936-96bf-9c3c0804e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors",
+								"7b75a444-994d-4936-96bf-9c3c0804e42d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Director (multiple fields)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json-patch+json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n      \"op\": \"replace\",\n      \"path\": \"/firstName\",\n      \"value\": \"Updated FirstName\"\n    },\n    {\n      \"op\": \"replace\",\n      \"path\": \"/lastName\",\n      \"value\": \"Updated LastName\"\n    }\n]"
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors/7b75a444-994d-4936-96bf-9c3c0804e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors",
+								"7b75a444-994d-4936-96bf-9c3c0804e42d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Director (copy & add)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json-patch+json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n      \"op\": \"add\",\n      \"path\": \"/firstName\",\n      \"value\": \"Updated FirstName\"\n    },\n    {\n      \"op\": \"copy\",\n      \"from\": \"/firstName\",\n      \"path\": \"/lastName\"\n    }\n]"
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors/7b75a444-994d-4936-96bf-9c3c0804e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors",
+								"7b75a444-994d-4936-96bf-9c3c0804e42d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Director",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Updated First Name\",\r\n    \"lastName\" : \"Updated Last Name\",\r\n    \"dateOfBirth\" : \"1978-03-04T00:00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors/7b75a444-994d-4936-96bf-9c3c0804e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors",
+								"7b75a444-994d-4936-96bf-9c3c0804e42d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Director (unexisting)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Updated First Name\",\r\n    \"lastName\" : \"Updated Last Name\",\r\n    \"dateOfBirth\" : \"1978-03-04T00:00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/directors/7b75a567-890d-4589-96bf-9c3c0235e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"directors",
+								"7b75a567-890d-4589-96bf-9c3c0235e42d"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Actors",
+			"item": [
+				{
+					"name": "GET Actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:51045/api/actors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Actor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:51045/api/actors/7b75a444-994d-4936-96bf-9c3c0804e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"actors",
+								"7b75a444-994d-4936-96bf-9c3c0804e42d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Actor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Ioannis\",\r\n    \"lastName\" : \"Mpezos\",\r\n    \"dateOfBirth\" : \"1958-03-04T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/actors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Actor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Updated First Name\",\r\n    \"lastName\" : \"Updated Last Name\",\r\n    \"dateOfBirth\" : \"1978-03-04T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/actors/7b75a444-994d-4936-96bf-9c3c0804e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"actors",
+								"7b75a444-994d-4936-96bf-9c3c0804e42d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Actor",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Updated First Name\",\r\n    \"lastName\" : \"Updated Last Name\",\r\n    \"dateOfBirth\" : \"1978-03-04T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:51045/api/actors/7b75a444-994d-4936-96bf-9c3c0804e42d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"actors",
+								"7b75a444-994d-4936-96bf-9c3c0804e42d"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Performances",
+			"item": [
+				{
+					"name": "GET Performances",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:51045/api/performances",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51045",
+							"path": [
+								"api",
+								"performances"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

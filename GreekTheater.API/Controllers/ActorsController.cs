@@ -39,7 +39,7 @@ namespace GreekTheater.API.Controllers
         }
 
         [HttpGet("{actorId}", Name = "GetActor")]
-        [HttpHead]
+        [HttpHead("{actorId}")]
         public ActionResult<ActorDto> GetActor(Guid actorId)
         {
             var actor = _unitOfWork.Actors.GetActor(actorId);
