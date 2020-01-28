@@ -337,12 +337,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\": \"Dimitris\",\r\n    \"lastName\" : \"Lignadis\",\r\n    \"dateOfBirth\" : \"1958-03-04T00:00:00\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\r\n    \"firstName\": \"Dimitris\",\r\n    \"lastName\" : \"Lignadis\",\r\n    \"dateOfBirth\" : \"1958-03-04T00:00:00\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:51045/api/directors",
@@ -721,12 +716,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\": \"Ioannis\",\r\n    \"lastName\" : \"Mpezos\",\r\n    \"dateOfBirth\" : \"1958-03-04T00:00:00\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\r\n    \"firstName\": \"Ioannis\",\r\n    \"lastName\" : \"Mpezos\",\r\n    \"dateOfBirth\" : \"1958-03-04T00:00:00\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:51045/api/actors",
@@ -757,12 +747,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\": \"Updated First Name\",\r\n    \"lastName\" : \"Updated Last Name\",\r\n    \"dateOfBirth\" : \"1978-03-04T00:00:00\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\r\n    \"firstName\": \"Updated First Name\",\r\n    \"lastName\" : \"Updated Last Name\",\r\n    \"dateOfBirth\" : \"1978-03-04T00:00:00\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:51045/api/actors/7b75a444-994d-4936-96bf-9c3c0804e42d",
@@ -794,12 +779,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\": \"Updated First Name\",\r\n    \"lastName\" : \"Updated Last Name\",\r\n    \"dateOfBirth\" : \"1978-03-04T00:00:00\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\r\n    \"firstName\": \"Updated First Name\",\r\n    \"lastName\" : \"Updated Last Name\",\r\n    \"dateOfBirth\" : \"1978-03-04T00:00:00\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:51045/api/actors/7b75a444-994d-4936-96bf-9c3c0804e42d",
@@ -845,6 +825,25 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "GET Root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51045/api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51045",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
